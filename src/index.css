@@ -2024,3 +2024,42 @@ body {
     padding: 40px 30px;
     text-align: center;
 }
+
+/* --- Added Premium Animations & Mobile Refinements --- */
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .lightbox-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .lightbox-img-wrapper {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .lightbox-info {
+        max-height: 45vh;
+        width: 100%;
+        padding-right: 0;
+        overflow-y: auto;
+    }
+    .lightbox-content {
+        padding: 24px;
+        width: 95%;
+        max-height: 90vh;
+    }
+    .spotify-player-left {
+        padding: 20px;
+    }
+}
+
