@@ -7,7 +7,7 @@ const DEFAULT_SONGS = [
     id: 1,
     title: 'Until I Found You',
     artist: 'Stephen Sanchez',
-    mp3_url: '/assets/bg_music.mp3',
+    mp3_url: 'assets/bg_music.mp3',
     lyrics: `
 [0.0] ♪ (Intro) ♪
 [10.6] Georgia, wrap me up in all your...
@@ -42,7 +42,7 @@ const OurSongView = ({ active, onBack, onGlobalMusicPause }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(177);
-  const [randomCover, setRandomCover] = useState('/assets/memory1.png');
+  const [randomCover, setRandomCover] = useState('assets/memory1.png');
   const [showUpload, setShowUpload] = useState(false);
   const [uploadLoading, setUploadLoading] = useState(false);
 
@@ -93,7 +93,7 @@ const OurSongView = ({ active, onBack, onGlobalMusicPause }) => {
       const randIdx = Math.floor(Math.random() * memoriesList.length);
       setRandomCover(memoriesList[randIdx].image_url);
     } else {
-      setRandomCover('/assets/memory1.png');
+      setRandomCover('assets/memory1.png');
     }
   };
 
@@ -202,7 +202,7 @@ const OurSongView = ({ active, onBack, onGlobalMusicPause }) => {
     setUploadLoading(true);
 
     try {
-      let mp3Url = '/assets/bg_music.mp3';
+      let mp3Url = 'assets/bg_music.mp3';
 
       if (isSupabaseConfigured) {
         const fileExt = audioFile.name.split('.').pop();

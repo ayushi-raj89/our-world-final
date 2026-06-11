@@ -5,21 +5,21 @@ import { supabase, isSupabaseConfigured, getLocalFallbackData, setLocalFallbackD
 const DEFAULT_MEMORIES = [
   {
     id: 1,
-    image_url: '/assets/memory1.png',
+    image_url: 'assets/memory1.png',
     title: 'the day distance finally lost',
     date: 'May 13, 2024',
     description: `for 1.5 years, we only knew each other through screens. Then came the day distance lost... It was even better than we imagined.`
   },
   {
     id: 2,
-    image_url: '/assets/memory2.png',
+    image_url: 'assets/memory2.png',
     title: 'the weekend promise',
     date: 'June 8, 2024',
     description: `Picking you up from PW classes and making sure you get to the metro safely.`
   },
   {
     id: 3,
-    image_url: '/assets/memory3.png',
+    image_url: 'assets/memory3.png',
     title: 'lost in the woods',
     date: 'July 22, 2024',
     description: `Walking around Sanjay Van, enjoying trees, nature, and silent peace together.`
@@ -78,7 +78,7 @@ const MemoriesView = ({ onBack, active }) => {
     setLoading(true);
 
     try {
-      let imageUrl = '/assets/memory1.png'; // fallback placeholder
+      let imageUrl = 'assets/memory1.png'; // fallback placeholder
 
       if (imageFile) {
         if (isSupabaseConfigured) {

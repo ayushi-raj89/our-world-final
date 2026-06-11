@@ -66,7 +66,7 @@ function App() {
     <div className="w-full min-h-screen relative overflow-x-hidden">
       {/* Background Video Loop */}
       <video autoPlay muted loop playsInline id="bg-video">
-        <source src="/assets/bgvideo.mp4" type="video/mp4" />
+        <source src="assets/bgvideo.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Readability Overlay */}
@@ -132,7 +132,7 @@ function App() {
       />
 
       {/* Ambient Audio Element */}
-      <audio ref={ambientAudioRef} src="/assets/bg_music.mp3" loop />
+      <audio ref={ambientAudioRef} src="assets/bg_music.mp3" loop />
     </div>
   );
 }
